@@ -11,7 +11,7 @@ jobs:
     name: foo
     uses: dipietrom/paws/.github/workflows/build-and-push.yaml@github-actions
     with:
-      username: woo
+      imagename: renderer
 
 #      - name: Set up Docker Buildx
 #        uses: docker/setup-buildx-action@v1
