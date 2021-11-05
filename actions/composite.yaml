@@ -1,0 +1,13 @@
+name: build
+
+inputs:
+  username:
+    required: true
+    type: string
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v2
+    - name: print username
+      run: echo ${{ inputs.username }}

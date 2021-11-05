@@ -1,0 +1,24 @@
+name: build
+
+on:
+  pull_request:
+    paths:
+      - images/renderer/**
+
+
+jobs:
+  build-and-deploy:
+    name: foo
+    uses: dipietrom/paws/.github/workflows/build-and-push.yaml@github-actions
+    with:
+      imagename: renderer
+
+#      - name: Set up Docker Buildx
+#        uses: docker/setup-buildx-action@v1
+#
+#      - name: Build and push
+#        id: docker_build
+#        uses: docker/build-push-action@v2
+#        with:
+#          context: images/renderer
+#          tags: quay.io/mdipietro_1/renderer:githubaction
