@@ -1,0 +1,23 @@
+name: print
+
+on:
+  pull_request:
+
+jobs:
+  update-container-tags:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+#        with:
+#          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+#      - name: git fetch
+#        run: |
+#          git fetch
+
+      - name: print
+        run: |
+          bash foo.sh
+
+      - name: echo
+        run: echo ${{ secret.DOCKER_USERNAME }}
